@@ -1,0 +1,57 @@
+/*$MainFont: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.MainBox {
+  display: flex;
+  flex-direction: column;
+  font-family: "Martian Mono", monospace;
+  align-items: flex-start;
+}
+
+.Title {
+  display: flex;
+  font-family: "Martian Mono", monospace;
+  align-items: center;
+  font-size: 1.7em;
+  margin: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.Headers {
+  display: flex;
+  font-family: "Martian Mono", monospace;
+  font-style: normal;
+  font-size: 1.1em;
+}
+
+#MondayItems, #TuesdayItems, #WednesdayItems, #ThursdayItems, #FridayItems, #SaturdayItems, #SundayItems {
+  display: flex;
+  flex-direction: column;
+  font-family: "Martian Mono", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.3em;
+  text-align: center;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.1em;
+}
+
+/*# sourceMappingURL=styles.css.map */
