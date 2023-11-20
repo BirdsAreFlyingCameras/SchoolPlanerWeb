@@ -6,7 +6,24 @@ fetch('http://localhost:3000/Info',).then((response) => response.json().then((Ou
 
     let ParsedJSON = JSON.parse(JSON.stringify(OutputJson));
 
+    console.log(ParsedJSON)
+
     for (let Day of NamesOfDays) {
+
+        let DateNumber = (ParsedJSON[Day][0]['DATENUMBER'])
+
+        console.log(DateNumber)
+
+        let DayHeader = document.getElementById(`${Day}Header`)
+
+        const DayHeaderContainer = document.createElement('h3')
+
+        DayHeaderContainer.textContent = `${Day}-${DateNumber}`
+
+        DayHeader.appendChild(DayHeaderContainer)
+
+
+
 
         const length = Object.keys(ParsedJSON[Day]).length;
 

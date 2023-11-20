@@ -5,7 +5,14 @@ var utils_js_2 = require("./utils.js");
 var NamesOfDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 fetch('http://localhost:3000/Info').then(function (response) { return response.json().then(function (OutputJson) {
     var ParsedJSON = JSON.parse(JSON.stringify(OutputJson));
+    console.log(ParsedJSON);
     var _loop_1 = function (Day) {
+        var DateNumber = (ParsedJSON[Day][0]['DATENUMBER']);
+        console.log(DateNumber);
+        var DayHeader = document.getElementById("".concat(Day, "Header"));
+        var DayHeaderContainer = document.createElement('h3');
+        DayHeaderContainer.textContent = "".concat(Day, "-").concat(DateNumber);
+        DayHeader.appendChild(DayHeaderContainer);
         var length_1 = Object.keys(ParsedJSON[Day]).length;
         var _loop_2 = function (i) {
             var task = (ParsedJSON[Day][i]['ASSIGNMENT']);
